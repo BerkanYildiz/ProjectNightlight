@@ -32,7 +32,7 @@
         private static void ExecuteTests(string[] Args)
         {
             // 
-            // Locate my nigga Bush.
+            // Locate /*George W. Bush*/ the current computer.
             // 
 
             var CIA = new CIA();
