@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhereYouAt", "src\WhereYouA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftPdbDownloader", "src\MicrosoftPdbDownloader\MicrosoftPdbDownloader.csproj", "{D25FCCFF-E5C4-41CE-BD55-E052B8BBC9A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoGetAndSet", "src\CryptoGetAndSet\CryptoGetAndSet.csproj", "{4B51F76A-104D-4457-BE23-F8DDF533C327}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoGetAndSet", "src\CryptoGetAndSet\CryptoGetAndSet.csproj", "{1F36ECC2-C930-468E-BB37-F2A4568012DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,14 +33,14 @@ Global
 		{D25FCCFF-E5C4-41CE-BD55-E052B8BBC9A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D25FCCFF-E5C4-41CE-BD55-E052B8BBC9A6}.Release|x64.ActiveCfg = Release|Any CPU
 		{D25FCCFF-E5C4-41CE-BD55-E052B8BBC9A6}.Release|x64.Build.0 = Release|Any CPU
-		{4B51F76A-104D-4457-BE23-F8DDF533C327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B51F76A-104D-4457-BE23-F8DDF533C327}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B51F76A-104D-4457-BE23-F8DDF533C327}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4B51F76A-104D-4457-BE23-F8DDF533C327}.Debug|x64.Build.0 = Debug|Any CPU
-		{4B51F76A-104D-4457-BE23-F8DDF533C327}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B51F76A-104D-4457-BE23-F8DDF533C327}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B51F76A-104D-4457-BE23-F8DDF533C327}.Release|x64.ActiveCfg = Release|Any CPU
-		{4B51F76A-104D-4457-BE23-F8DDF533C327}.Release|x64.Build.0 = Release|Any CPU
+		{1F36ECC2-C930-468E-BB37-F2A4568012DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F36ECC2-C930-468E-BB37-F2A4568012DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F36ECC2-C930-468E-BB37-F2A4568012DF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1F36ECC2-C930-468E-BB37-F2A4568012DF}.Debug|x64.Build.0 = Debug|Any CPU
+		{1F36ECC2-C930-468E-BB37-F2A4568012DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F36ECC2-C930-468E-BB37-F2A4568012DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F36ECC2-C930-468E-BB37-F2A4568012DF}.Release|x64.ActiveCfg = Release|Any CPU
+		{1F36ECC2-C930-468E-BB37-F2A4568012DF}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
